@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	transition: margin ease-in-out 0.2s, width ease-in-out 0.2s, height ease-in-out 0.2s;
 }
 
 body {
@@ -36,7 +37,8 @@ body {
 }
 
 .resume {
-	margin: 50px auto;
+	border-radius: 20px;
+	margin: 5% auto;
 	border: 1px solid #f5f5f5;
 	box-shadow: 1px 1px 7px 7px #f5f5f5;
 	padding: 30px 0;
@@ -44,8 +46,8 @@ body {
 }
 
 .resume__block {
-	border-bottom: 3px solid var(--border-color);
-	padding-bottom: 30px;
+	border-bottom: 1px solid var(--border-color);
+	padding-bottom: 15px;
 	margin-bottom: 15px;
 }
 
@@ -53,28 +55,6 @@ body {
 	display: flex;
 }
 
-@media screen and (max-width: 576px) {
-	.main-info,
-	.contact_info_container {
-		flex-direction: column;
-	}
-
-	.contact_info_container {
-		align-items: center;
-	}
-
-	.contact-info__block:not(:last-child) {
-		margin-bottom: 20px;
-	}
-
-	.contact-info__block {
-		align-items: center;
-	}
-
-	.experiences {
-		margin-right: 0;
-	}
-}
 .contact-info__header,
 .contact-info__sub-header {
 	text-align: center;
@@ -151,7 +131,8 @@ body {
 }
 
 .intro__icon-wrapper {
-	margin-right: 30px;
+	margin-right: 10px;
+	margin-bottom: 10px;
 	width: 30px;
 	display: flex;
 	justify-content: center;
@@ -239,7 +220,7 @@ body {
 }
 
 .additional-info {
-	margin: 20px 20px 20px 40px;
+	margin: 20px 20px 20px 4%;
 }
 
 .additional-info__header {
@@ -266,4 +247,51 @@ body {
 	border-radius: 8px;
 	padding: 5px 10px;
 	background: var(--bg-timeline-item-pointer-color);
+}
+
+@media screen and (max-width: 576px) {
+	.contact-info__avatar {
+		width: 150px;
+		height: 150px;
+	}
+	.resume {
+		margin: 0;
+	}
+
+	.intro {
+		flex-wrap: wrap;
+	}
+
+	.timeline__block {
+		max-width: 100%;
+	}
+
+	.additional-info {
+		width: 100%;
+		margin: 0;
+	}
+
+	.resume__block {
+		flex-wrap: wrap;
+	}
+	.main-info,
+	.contact_info_container {
+		flex-direction: column;
+	}
+
+	.contact_info_container {
+		align-items: center;
+	}
+
+	.contact-info__block:not(:last-child) {
+		margin-bottom: 20px;
+	}
+
+	.contact-info__block {
+		align-items: center;
+	}
+
+	.experiences {
+		margin-right: 0;
+	}
 }
