@@ -5,7 +5,7 @@ const [like, notLike, knowHow, knowWhat] = [
 	'html, css, javascript, mongodb, node.js, sql, bootstrap, rest, bpmn, git, google search 😎, npm, figma, oop, react (basics), postman',
 ];
 
-window.addEventListener('load', onLoad);
+onLoad();
 
 function onLoad() {
 	document.getElementById('like').innerHTML = shuffle(like.split(', '))
