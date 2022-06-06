@@ -309,7 +309,7 @@ body {
 
 .timeline__item--item_text {
 	text-indent: 20px;
-	color: var(--secondary-text-color);
+	color: var(--primary-text-color);
 	text-align: left;
 }
 
@@ -332,6 +332,7 @@ body {
 	background-color: #ff9a00;
 	transform: scale(130%);
 }
+
 .timeline__item:hover {
 	background-color: var(--bg-timeline-item-hover-color);
 }
