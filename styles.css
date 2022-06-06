@@ -108,7 +108,9 @@ body {
 	justify-content: start;
 }
 
-.contact-info__item:hover {
+.contact-info__item:hover,
+.contact-info__item:active,
+.contact-info__item:focus {
 	text-decoration: underline;
 	text-decoration-color: var(--text-decoration-color);
 }
@@ -272,7 +274,6 @@ body {
 }
 
 .timeline__block {
-<<<<<<< HEAD
 	margin: 20px auto;
 }
 
@@ -284,7 +285,7 @@ body {
 	position: relative;
 	margin: 0 0 20px 20px;
 	padding: 10px;
-	border: 1px solid var(--border-color);
+	border: 1px solid var(--bg-timeline-item-hover-color);
 	border-radius: 8px;
 	transition: background-color ease-in-out 0.2s;
 }
@@ -329,21 +330,15 @@ body {
 	border-radius: 50%;
 }
 
-.timeline__item:hover > .timeline__item-header::before {
+.timeline__item:hover > .timeline__item-header::before,
+.timeline__item:active > .timeline__item-header::before,
+.timeline__item:focus > .timeline__item-header::before {
 	background-color: #ff9a00;
 	transform: scale(130%);
 }
 
-.timeline__item:hover {
+.timeline__item:hover,
+.timeline__item:active,
+.timeline__item:focus {
 	background-color: var(--bg-timeline-item-hover-color);
-=======
-}
-.timeline__block--outer_line {
-}
-.timeline__item {
-}
-.timeline__item-header {
-}
-.timeline__item--item_text {
->>>>>>> fd33688 (Added layout for timeline block)
 }
