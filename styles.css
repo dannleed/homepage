@@ -264,3 +264,14 @@ body {
 .additional-info__languages-item {
 	color: var(--secondary-text-color);
 }
+
+.timeline__block {
+}
+.timeline__block--outer_line {
+}
+.timeline__item {
+}
+.timeline__item-header {
+}
+.timeline__item--item_text {
+}
