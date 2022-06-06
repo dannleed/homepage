@@ -272,6 +272,7 @@ body {
 }
 
 .timeline__block {
+<<<<<<< HEAD
 	margin: 20px auto;
 }
 
@@ -335,4 +336,14 @@ body {
 
 .timeline__item:hover {
 	background-color: var(--bg-timeline-item-hover-color);
+=======
+}
+.timeline__block--outer_line {
+}
+.timeline__item {
+}
+.timeline__item-header {
+}
+.timeline__item--item_text {
+>>>>>>> fd33688 (Added layout for timeline block)
 }
