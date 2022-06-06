@@ -92,7 +92,9 @@ body {
 	justify-content: start;
 }
 
-.contact-info__item:hover {
+.contact-info__item:hover,
+.contact-info__item:active,
+.contact-info__item:focus {
 	text-decoration: underline;
 	text-decoration-color: var(--text-decoration-color);
 }
@@ -165,7 +167,7 @@ body {
 	position: relative;
 	margin: 0 0 20px 20px;
 	padding: 10px;
-	border: 1px solid var(--border-color);
+	border: 1px solid var(--bg-timeline-item-hover-color);
 	border-radius: 8px;
 	transition: background-color ease-in-out 0.2s;
 }
