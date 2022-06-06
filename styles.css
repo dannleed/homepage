@@ -6,7 +6,7 @@
 
 body {
 	font-family: Arial, Helvetica, sans-serif;
-	line-height: 1.5;
+	line-height: 1.3;
 
 	--primary-text-color: #181820;
 	--secondary-text-color: #5c5c62;
@@ -14,6 +14,7 @@ body {
 	--icon-color: #6a737d;
 	--border-color: #ff9a0045;
 	--text-decoration-color: #ff9a00;
+	--bg-timeline-item-hover-color: #ffdeac;
 }
 
 .container {
@@ -62,6 +63,10 @@ body {
 		margin-bottom: 20px;
 	}
 
+	.contact-info__block {
+		align-items: center;
+	}
+
 	.experiences {
 		margin-right: 0;
 	}
@@ -87,10 +92,13 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	max-width: 200px;
+	width: 100%;
 }
 
 .contact-info__block--center {
 	justify-content: center;
+	align-items: center;
 }
 
 .contact-info__item {
@@ -98,6 +106,11 @@ body {
 	text-decoration: none;
 	display: flex;
 	justify-content: start;
+}
+
+.contact-info__item:hover {
+	text-decoration: underline;
+	text-decoration-color: var(--text-decoration-color);
 }
 
 .contact-info__item:not(:last-child) {
@@ -122,8 +135,8 @@ body {
 
 .contact-info__avatar {
 	border-radius: 50%;
-	width: 100px;
-	height: 100px;
+	width: 120px;
+	height: 120px;
 	object-fit: cover;
 	border: 3px solid;
 	border-color: var(--text-decoration-color);
@@ -256,4 +269,70 @@ body {
 
 .additional-info__languages-item {
 	color: var(--secondary-text-color);
+}
+
+.timeline__block {
+	margin: 20px auto;
+}
+
+.timeline__block--outer_line {
+	border-left: 2px solid var(--border-color);
+}
+
+.timeline__item {
+	position: relative;
+	margin: 0 0 20px 20px;
+	padding: 10px;
+	border: 1px solid var(--border-color);
+	border-radius: 8px;
+	transition: background-color ease-in-out 0.2s;
+}
+
+.timeline__item-header {
+	color: var(--secondary-text-color);
+	text-align: left;
+	margin-bottom: 5px;
+}
+
+.timeline__item-header::before {
+	margin-top: 5px;
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background: white;
+	border-radius: 50%;
+	left: -30px;
+	border: 3px solid var(--text-decoration-color);
+	transition: background-color ease-in-out 0.2s, transform ease-in-out 0.2s;
+}
+
+.timeline__item--item_text {
+	text-indent: 20px;
+	color: var(--primary-text-color);
+	text-align: left;
+}
+
+.timeline__item--item_text:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+.timeline__item--item_text::before {
+	margin-top: 6px;
+	left: 10px;
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background: var(--text-decoration-color);
+	border-radius: 50%;
+}
+
+.timeline__item:hover > .timeline__item-header::before {
+	background-color: #ff9a00;
+	transform: scale(130%);
+}
+
+.timeline__item:hover {
+	background-color: var(--bg-timeline-item-hover-color);
 }
